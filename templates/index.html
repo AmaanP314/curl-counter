@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Bicep Curl Rep Counter</title>
+     <link rel="stylesheet" href="/static/styles.css">
+ </head>
+ <body>
+     <div class="container">
+         <h1>Bicep Curl Repetition Counter</h1>
+         <p class="description">
+             This app helps you track your bicep curl repetitions in real-time using computer vision. 
+             By utilizing your device's camera, it detects the movement of your arms and counts how many curls you've completed. 
+             To get started, simply toggle the camera on and begin your workout!
+         </p>
+         <div class="camera-toggle">
+             <label class="switch">
+                 <input type="checkbox" id="cameraSwitch">
+                 <span class="slider round"></span>
+             </label>
+             <span id="cameraStatus">Camera Off</span>
+         </div>
+         <video id="video" width="640" height="480" autoplay></video>
+         <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+         <div class="results">
+             <p>Reps: <span id="reps">0</span></p>
+             <p>Stage: <span id="stage">N/A</span></p>
+         </div>
+     </div>
+ 
+     <script src="/static/app.js"></script>
+ </body>
+ </html>
+ 
